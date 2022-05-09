@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>AluraGeek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/agregar-producto/app.css">
+    <link rel="stylesheet" href="css/agregar-producto/tablet.css">
+    <link rel="stylesheet" href="css/agregar-producto/desktop.css">
+</head>
+<body>
+    <header class="header contenedor">
+        <div id="logo-div" class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="logo empresa"></a>
+        </div>
+        <div class="login-buscador">
+            <div id="login-div" class="login">
+                <button type="button" class="btn-login" id="btn-login">Login</button>
+            </div>
+            <div class="buscador">
+                <input type="text" id="input-buscador"class="input-buscador" placeholder="¿Qué deseas buscar?">
+                <svg width="18" height="18" id="icono-buscador" class="icono-buscador" viewBox="0 0 18 18" fill="#464646" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5 11.5H11.71L11.43 11.23C12.63 9.83 13.25 7.92 12.91 5.89C12.44 3.11 10.12 0.89 7.32001 0.55C3.09001 0.03 -0.469985 3.59 0.0500152 7.82C0.390015 10.62 2.61002 12.94 5.39002 13.41C7.42002 13.75 9.33002 13.13 10.73 11.93L11 12.21V13L15.25 17.25C15.66 17.66 16.33 17.66 16.74 17.25C17.15 16.84 17.15 16.17 16.74 15.76L12.5 11.5ZM6.50002 11.5C4.01002 11.5 2.00002 9.49 2.00002 7C2.00002 4.51 4.01002 2.5 6.50002 2.5C8.99002 2.5 11 4.51 11 7C11 9.49 8.99002 11.5 6.50002 11.5Z"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <section class="agregar-div">
+        <div class="agregar-formulario">
+            <form id="formulario-agregar" class="formulario contenedor">
+                <div class="agregar-formulario-titulo contenedor">
+                    <h2 id="titulo-agregar-editar">Agregar nuevo producto</h2>
+                </div>
+                <div class="contenedor-agregar">
+                    <div id="drop-zone-agregar" class="drop-zone-agregar">
+                        <div id="drop-zone" class="drop-zone">
+                            <div id="drop-zone-div" class="drop-zone-div">
+                                <img id="icono-agregar-imagen" src="img/icono_mas.svg" alt="icono-agregar-imagen">
+                                <p class="texto-movil">Agregar una imágen para el producto</p>
+                                <p class="texto-tablet">Arrastre para agregar una imágen para el producto</p>
+                            </div>
+                        </div>
+                        <div class="drop-zone-hide">
+                            <p>O</p>
+                        </div>
+                        <div class="drop-zone-hide">
+                            <button type="button" id="btn-buscar-archivo" class="btn-buscar-agregar"></button>
+                            <input type='file' accept="image/png,image/jpeg" id="input-buscar-archivo" class="input-buscar-archivo" style="display:none">
+                        </div>
+                    </div>
+                    <div id="contenedor-campos-agregar">
+                        <div id="campo-agregar-nombre" class="campo-agregar">
+                            <label>Nombre</label>
+                            <input id="input-agregar-nombre" type="text" placeholder="Nombre del Producto" required />
+                        </div>
+                        <div id="campo-agregar-precio" class="campo-agregar">
+                            <label>Precio del Producto</label>
+                            <input id="input-agregar-precio" type="number" placeholder="Precio del Producto" required />
+                        </div>
+                        <div id="campo-agregar-categoria" class="campo-agregar">
+                            <label>Categoría</label>
+                            <select id="categoria">
+                                <option value="">- Seleccionar -</option>
+                                <option value="1">Star Wars</option>
+                                <option value="2">Consolas</option>
+                                <option value="3">Diversos</option>
+                            </select>
+                        </div>
+                        <div id="campo-agregar-mensaje" class="campo-agregar mensaje">
+                            <textarea id="input-agregar-mensaje" class="text-area" placeholder="Descripción del Producto" required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div id="spinner-agregar">
+                    <div class="sk-chase">
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                    </div>
+                </div>
+                <div class="contenedor-btn-agregar">
+                    <button type="button" class="btn-enviar" id="btn-agregar-enviar">Agregar Producto</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="contacto">
+        <div class="contacto-logo-nav">
+            <div class="contacto-logo">
+                <a href="index.html"><img src="img/logo.png" alt="logo empresa"></a>
+            </div>
+            <nav class="contacto-nav">
+                <li>Quienes somos</li>
+                <li>Política de privacidad</li>
+                <li>Programa de fidelidad</li>
+                <li>Nuestras tiendas</li>
+                <li>Quiero ser franquiciado</li>
+                <li>Anuncie aquí</li>
+            </nav>
+        </div>
+        <div class="contacto-formulario">
+            <form id="formulario-contacto" class="formulario contenedor">
+                <h2>Hable con nosotros</h2>
+                <div id="contenedor-campos" class="contenedor-campos">
+                    <div id="campo-contacto-nombre" class="campo">
+                        <label>Nombre</label>
+                        <input type="text" placeholder="Tu Nombre" id="input-contacto-nombre" required />
+                    </div>
+                    <div id="campo-contacto-mensaje" class="campo mensaje">
+                        <textarea class="text-area" placeholder="Escribe tu mensaje" id="input-contacto-mensaje" required></textarea>
+                    </div>
+                </div>
+                <div  id="spinner">
+                    <div class="sk-chase">
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn-enviar" id="btn-contacto-enviar">Enviar mensaje</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <footer class="footer contenedor">
+        <p>Hecho con <span class="corazon">❤</span> por <span>Diego Fabián Di Giorgio</span> | &copy; 2022</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/agregar-producto.js" type="module"></script>
+</body>
+</html>

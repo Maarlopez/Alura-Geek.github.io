@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+    
+    .hero-producto-div {
+        max-width: 90%;
+        display: flex;
+        margin: 0 auto;
+        gap: 1.6rem;
+    }
+
+    .hero-producto-div img {
+        width: 25.4rem;
+        height: 15.7rem;
+    }
+
+    .contenedor-detalle-producto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .hero-producto-div .contenedor h4 {
+        margin-top: 0;
+    }
+
+    .descripcion {
+        margin-bottom: 0;
+    }
+}
